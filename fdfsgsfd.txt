@@ -1,0 +1,278 @@
+if game.PlaceId == 8750997647 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Jeweettoch hub | Tapping Legends X!", HidePremium = false, Intro = false, IntroText = "Jeweettoch Hub", SaveConfig = true, ConfigFolder = "TutorialConfig"})
+
+-- Values
+_G.autoTap = true
+_G.autoRebirth = true
+_G.autoHatch = true
+_G.selectEgg = "basic Egg"
+_G.autoEquip = true
+_G.teleports = true
+
+
+
+-- Functions
+
+function autoTap()
+    while _G.autoTap == true do
+        game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
+        wait(.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+    end
+end
+
+function autoRebirth()
+	while _G.autoRebirth == true do
+	local args = {
+		[1] = 1
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))	
+	wait(.0001)
+    end
+end
+
+function autoHatch()
+	while _G.autoHatch == true do
+		game:GetService("ReplicatedStorage").Remotes.BuyEgg:InvokeServer(_G.selectEgg,1)	
+		wait(.000000000001)	
+	end
+end
+
+function equiqBest()
+	game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
+	game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
+end
+
+function autoEquipBest()
+	while _G.autoEquipBest == true do
+		game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
+		game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
+	wait(30)
+end
+end
+
+function Spawn()
+	local args = {
+		[1] = 1
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Forest()
+	local args = {
+		[1] = 2
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function winter()
+	local args = {
+		[1] = 4
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))
+end	
+
+function lava()
+	local args = {
+		[1] = 5
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function aqua()
+	local args = {
+		[1] = 6
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Sakura()
+	local args = {
+		[1] = 7
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))
+end
+
+function Mines()
+	local args = {
+		[1] = 8
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Galaxy()
+	local args = {
+		[1] = 9
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Heaven()
+	local args = {
+		[1] = 10
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+-- Tabs
+local FarmTab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local EggsTab = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local miscTab = Window:MakeTab({
+	Name = "misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local teleportsTab = Window:MakeTab({
+	Name = "teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- Toggles
+FarmTab:AddToggle({
+	Name = "Auto Tap",
+	Default = false,
+	Callback = function(Value)
+		_G.autoTap = Value
+        autoTap()
+	end    
+})
+
+FarmTab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoRebirth = Value
+        autoRebirth()
+	end
+})
+
+EggsTab:AddLabel("You need to be near the egg in order for AutoHatch to work.")
+
+EggsTab:AddToggle({
+	Name = "Auto Hatch",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHatch = Value
+		autoHatch()
+	end
+})
+
+miscTab:AddLabel("Equip Best Pets")
+
+miscTab:AddToggle({
+	Name = "Auto Equip Best Pets",
+	Default = false,
+	Callback = function(Value)
+		_G.autoEquipBest = Value
+		autoEquipBest()
+	end
+})
+
+-- Buttons
+
+miscTab:AddButton({
+	Name = "Equip Best Pets",
+	Callback = function()
+      		equiqBest()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Spawn",
+	Callback = function()
+      		Spawn()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Forest",
+	Callback = function()
+      		Forest()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Winter",
+	Callback = function()
+      		winter()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Lava",
+	Callback = function()
+      		lava()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Aqua",
+	Callback = function()
+      		aqua()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Sakura",
+	Callback = function()
+      		Sakura()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Mines",
+	Callback = function()
+      		Mines()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Galaxy",
+	Callback = function()
+      		Galaxy()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Heaven",
+	Callback = function()
+      		Heaven()
+  	end    
+})
+
+-- DropDowns
+
+EggsTab:AddDropdown({
+	Name = "Select Egg",
+	Default = "Basic Egg",
+	Options = {"Basic Egg", "Rare Egg", "Forest Egg", "Winter Egg", "Lava Egg", "Aqua Egg", "Sakura Egg", "Mines Egg", "Galaxy Egg", "Heaven Egg"},
+	Callback = function(Value)
+		_G.selectEgg = Value
+		print(_G.selectEgg)
+	end    
+})
+
+end
+
+OrionLib:Init()

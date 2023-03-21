@@ -1,0 +1,584 @@
+if game.PlaceId == 8750997647 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Spawn Hub | Tapping Legends X!", HidePremium = false, Intro = false, IntroText = "Spawn Hub", SaveConfig = true, ConfigFolder = "TutorialConfig"})
+
+-- Values
+_G.autoTap = true
+_G.autoRebirth = true
+_G.autoHatch = true
+_G.selectEgg = "basic Egg"
+_G.autoEquip = true
+_G.teleports = true
+_G.redeemcodes = true
+
+
+
+-- Functions
+
+function autoTap()
+    while _G.autoTap == true do
+        game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
+        wait(.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+    end
+end
+
+function autoRebirth()
+	while _G.autoRebirth == true do
+	local args = {
+		[1] = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))	
+	wait(.0001)
+    end
+end
+
+function autoHatch()
+	while _G.autoHatch == true do
+		game:GetService("ReplicatedStorage").Remotes.BuyEgg:InvokeServer(_G.selectEgg,3)	
+		wait(.000000000001)	
+	end
+end
+
+function equiqBest()
+	game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
+	game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
+end
+
+function autoEquipBest()
+	while _G.autoEquipBest == true do
+		game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
+		game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
+	wait(30)
+end
+end
+
+function redeemcodes()
+game:GetService("ReplicatedStorage").Remotes.RedeemCode:InvokeServer(_G.redeemcodes,1)
+end
+
+function infinityyield()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end
+
+function Fly()
+	loadstring(game:HttpGet('https://pastebin.com/raw/Z5wv0rtP'))()
+end
+
+function Rejoin()
+	loadstring(game:HttpGet('https://pastebin.com/raw/yVdXMaFy'))()
+end
+
+function Spawn()
+	local args = {
+		[1] = 1
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Forest()
+	local args = {
+		[1] = 2
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function winter()
+	local args = {
+		[1] = 4
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))
+end	
+
+function lava()
+	local args = {
+		[1] = 5
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function aqua()
+	local args = {
+		[1] = 6
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Sakura()
+	local args = {
+		[1] = 7
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))
+end
+
+function Mines()
+	local args = {
+		[1] = 8
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Galaxy()
+	local args = {
+		[1] = 9
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Heaven()
+	local args = {
+		[1] = 10
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Hell()
+	local args = {
+		[1] = 11
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))
+end	
+
+function Tech()
+	local args = {
+		[1] = 12
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))
+end
+
+function Candy()
+	local args = {
+		[1] = 15
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Magic()
+	local args = {
+		[1] = 16
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Fantasy()
+	local args = {
+		[1] = 17
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))
+end
+
+function Toy()
+	local args = {
+		[1] = 18
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Retro()
+	local args = {
+		[1] = 19
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Lab()
+	local args = {
+		[1] = 20
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Temple()
+	local args = {
+		[1] = 21
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Farm()
+	local args = {
+		[1] = 22
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Carnival()
+	local args = {
+		[1] = 23
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Kitchen()
+	local args = {
+		[1] = 24
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Wildwest()
+	local args = {
+		[1] = 25
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Medieval()
+	local args = {
+		[1] = 26
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Spy()
+	local args = {
+		[1] = 27
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+
+function Frost()
+	local args = {
+		[1] = 28
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(unpack(args))	
+end
+-- Tabs
+local CreditsTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local FarmTab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local EggsTab = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local miscTab = Window:MakeTab({
+	Name = "misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local teleportsTab = Window:MakeTab({
+	Name = "teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- Toggles
+FarmTab:AddToggle({
+	Name = "Auto Tap",
+	Default = false,
+	Callback = function(Value)
+		_G.autoTap = Value
+        autoTap()
+	end    
+})
+
+FarmTab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoRebirth = Value
+        autoRebirth()
+	end
+})
+
+CreditsTab:AddLabel("-- Made by robloxexploits#6772")
+CreditsTab:AddLabel("-- Discord: https://discord.gg/4P7nkPTH4D")
+CreditsTab:AddLabel("-- More updates soon, Join discord and gimme some ideas")
+
+
+EggsTab:AddLabel("You need to be near the egg in order for AutoHatch to work.")
+
+EggsTab:AddToggle({
+	Name = "Auto Hatch",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHatch = Value
+		autoHatch()
+	end
+})
+
+miscTab:AddLabel("Equip Best Pets")
+
+miscTab:AddToggle({
+	Name = "Auto Equip Best Pets",
+	Default = false,
+	Callback = function(Value)
+		_G.autoEquipBest = Value
+		autoEquipBest()
+	end
+})
+
+-- Buttons
+
+miscTab:AddButton({
+	Name = "Equip Best Pets",
+	Callback = function()
+      		equiqBest()
+  	end    
+})
+
+miscTab:AddLabel("Collect all codes (Can only use onces)(Dont Work i fix later!)")
+
+miscTab:AddButton({
+	Name = "Collect Codes",
+	Callback = function()
+      		redeemcodes()
+  	end    
+})
+
+miscTab:AddLabel("Admin Script")
+
+miscTab:AddButton({
+	Name = "Infinity Yield",
+	Callback = function()
+		infinityyield()
+  	end    
+})
+
+miscTab:AddLabel("Fly Script (X To unfly or fly!)")
+
+miscTab:AddButton({
+	Name = "Fly Script",
+	Callback = function()
+		Fly()
+  	end    
+})
+
+miscTab:AddLabel("Rejoin the same game!")
+
+miscTab:AddButton({
+	Name = "Rejoin Game",
+	Callback = function()
+		Rejoin()
+  	end    
+})
+
+teleportsTab:AddLabel("You cant teleport if u dont own the place")
+
+teleportsTab:AddButton({
+	Name = "Spawn",
+	Callback = function()
+      		Spawn()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Forest",
+	Callback = function()
+      		Forest()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Winter",
+	Callback = function()
+      		winter()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Lava",
+	Callback = function()
+      		lava()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Aqua",
+	Callback = function()
+      		aqua()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Sakura",
+	Callback = function()
+      		Sakura()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Mines",
+	Callback = function()
+      		Mines()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Galaxy",
+	Callback = function()
+      		Galaxy()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Heaven",
+	Callback = function()
+      		Heaven()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Hell",
+	Callback = function()
+      		Hell()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Tech",
+	Callback = function()
+      		Tech()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Candy",
+	Callback = function()
+      		Candy()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Magic",
+	Callback = function()
+      		Magic()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Fantasy",
+	Callback = function()
+      		Fantasy()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Toy",
+	Callback = function()
+      		Toy()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Retro",
+	Callback = function()
+      		Retro()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Lab",
+	Callback = function()
+      		Lab()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Temple",
+	Callback = function()
+      		Temple()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Farm",
+	Callback = function()
+      		Farm()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Carnival",
+	Callback = function()
+      		Carnival()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+      		Kitchen()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Wild West",
+	Callback = function()
+      		Wildwest()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Medieval",
+	Callback = function()
+      		Medieval()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Spy",
+	Callback = function()
+      		Spy()
+  	end    
+})
+
+teleportsTab:AddButton({
+	Name = "Frost",
+	Callback = function()
+      		Frost()
+  	end    
+})
+
+-- DropDowns
+
+EggsTab:AddDropdown({
+	Name = "Select Egg",
+	Default = "Basic Egg",
+	Options = {"Basic Egg", "Rare Egg", "Forest Egg", "Winter Egg", "Lava Egg", "Aqua Egg", "Sakura Egg", "Mines Egg", "Galaxy Egg", "Heaven Egg", "Hell Egg", "Tech Egg", "Steampunk Egg", "Swamp Egg", "Candy Egg", "Magic Egg", "Fantasy Egg", "Toy Egg", "Retro Egg", "Lab Egg", "Temple Egg", "Farm Egg", "Carnival Egg", "Kitchen Egg", "Wild West Egg", "Medieval Egg", "Spy Egg", "Frost Egg"},
+	Callback = function(Value)
+		_G.selectEgg = Value
+		print(_G.selectEgg)
+	end    
+})
+
+end
+
+OrionLib:Init()  
